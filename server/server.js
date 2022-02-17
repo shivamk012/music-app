@@ -23,9 +23,10 @@ app.post('/login' , (req,res)=>{
         // scope: scope,
     });
 
-    console.log(spotifyapi);
+    // console.log(spotifyapi);
 
     spotifyapi.authorizationCodeGrant(code).then(data=>{
+        console.log(data);
         // console.log(data);
         res.json(
             data
